@@ -227,6 +227,7 @@ puts-step "Installing dependencies using Pip ($PIP_VERSION)"
 
 # Django collectstatic support.
 bpwatch start collectstatic
+  echo "-----> sub-env $BIN_DIR/steps/collectstatic"
   sub-env $BIN_DIR/steps/collectstatic
 bpwatch stop collectstatic
 
