@@ -7,6 +7,10 @@ MANAGE_FILE=${MANAGE_FILE:-fakepath}
 
 [ -f .heroku/collectstatic_disabled ] && DISABLE_COLLECTSTATIC=1
 
+echo "-----> Checking DISABLE_COLLECTSTATIC $DISABLE_COLLECTSTATIC"
+echo "-----> Checking MANAGE_FILE $MANAGE_FILE"
+echo "-----> Checking PWD $PWD"
+
 if [ ! "$DISABLE_COLLECTSTATIC" ] && [ -f "$MANAGE_FILE" ]; then
     set +e
 
